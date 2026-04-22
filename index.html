@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSG.com 데이터 인사이트 대시보드</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <nav class="navbar glass">
+        <div class="logo">SSG<span>.INSIGHTS</span></div>
+        <ul class="nav-links">
+            <li><a href="#overview">개요</a></li>
+            <li><a href="#kpi">핵심지표</a></li>
+            <li><a href="#analysis">심층분석</a></li>
+            <li><a href="#report">종합리포트</a></li>
+        </ul>
+    </nav>
+
+    <header id="overview" class="hero">
+        <div class="hero-content">
+            <h1 class="reveal">SSG.com 특가 상품<br><span class="highlight">데이터 인사이트</span></h1>
+            <p class="reveal-delay">380개의 실시간 특가 데이터를 분석하여 도출된 전략적 리포트 대시보드입니다.</p>
+            <div class="header-btns reveal-delay">
+                <a href="#kpi" class="btn btn-primary">분석 시작하기</a>
+                <a href="#report" class="btn btn-outline">리포트 전문보기</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="blob-wrapper">
+                <div class="blob"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="kpi" class="section">
+            <h2 class="section-title">핵심 실적 지표 (KPI)</h2>
+            <div class="kpi-grid">
+                <div class="kpi-card glass animate-up">
+                    <div class="kpi-label">수집 상품 수</div>
+                    <div class="kpi-value counter">380</div>
+                    <div class="kpi-trend pos">↑ 100% 수집완료</div>
+                </div>
+                <div class="kpi-card glass animate-up">
+                    <div class="kpi-label">평균 판매가</div>
+                    <div class="kpi-value">95,842<span>원</span></div>
+                    <div class="kpi-trend">중앙값: 33,520원</div>
+                </div>
+                <div class="kpi-card glass animate-up">
+                    <div class="kpi-label">평균 할인율</div>
+                    <div class="kpi-value">25.1<span>%</span></div>
+                    <div class="kpi-trend pos">Max: 75%</div>
+                </div>
+                <div class="kpi-card glass animate-up">
+                    <div class="kpi-label">최상위 브랜드</div>
+                    <div class="kpi-value">아디다스</div>
+                    <div class="kpi-trend">주문 지수 상위권</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="analysis" class="section">
+            <h2 class="section-title">데이터 심층 시각화</h2>
+            <div class="chart-container">
+                <div class="chart-sidebar glass">
+                    <button class="tab-btn active" data-chart="01_keyword_tfidf.png">핵심 키워드</button>
+                    <button class="tab-btn" data-chart="02_brand_count.png">브랜드 빈도</button>
+                    <button class="tab-btn" data-chart="03_seller_count.png">판매처 분포</button>
+                    <button class="tab-btn" data-chart="04_price_dist.png">가격 분포</button>
+                    <button class="tab-btn" data-chart="05_discount_rate_dist.png">할인율 분포</button>
+                    <button class="tab-btn" data-chart="10_correlation_heatmap.png">상관관계</button>
+                    <button class="tab-btn" data-chart="11_brand_seller_crosstab.png">교차 분석</button>
+                </div>
+                <div class="chart-display glass animate-fade">
+                    <div class="chart-header">
+                        <h3 id="current-chart-title">itemName 주요 키워드 분석 (TF-IDF)</h3>
+                    </div>
+                    <div class="chart-body">
+                        <img id="main-chart" src="assets/01_keyword_tfidf.png" alt="SSG 분석 차트">
+                    </div>
+                    <div class="chart-footer">
+                        <p id="chart-desc">대부분의 상품이 10만원 이하의 중저가 구간에 집중되어 있으나, 일부 초고가 상품이 롱테일 구조를 형성하고 있어 가격 가독성 전략이 중요합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="report" class="section report-section">
+            <h2 class="section-title">비즈니스 전략 대시보드 리포트</h2>
+            <div class="report-grid">
+                <div class="report-card glass reveal">
+                    <h3>수치형 데이터 인사이트</h3>
+                    <p>수집된 상품의 평균 판매가는 약 9.5만원으로 나타나며, 중앙값은 약 3.3만원입니다. 이는 소수의 고가 백화점 브랜드가 평균을 올리고 있음을 보여주며, 대다수의 특가 상품은 중저가 생활 밀접형 제품임을 시사합니다. 할인율 20~30% 구간에서 가장 높은 구매 전환이 예상됩니다.</p>
+                </div>
+                <div class="report-card glass reveal">
+                    <h3>범주형 데이터 인사이트</h3>
+                    <p>신세계백화점과 이마트몰의 균형 있는 상품 구성이 SSG.com의 프리미엄 이미지를 유지시키고 있습니다. 특히 브랜드 파워가 강력한 스포츠 브랜드와 식품 카테고리의 충성도가 높게 나타났으며, 이를 통한 연계 판매 전략이 유효할 것으로 분석됩니다.</p>
+                </div>
+                <div class="report-card glass reveal full-width">
+                    <h3>종합 비즈니스 제언</h3>
+                    <p>SSG.com은 '고정적 할인' 보다는 '품목별 차별화 전략'을 구사하고 있습니다. 특히 고할인율(50%+) 상품과 저가 생필품의 결합을 통해 고객 페이지 유동성을 확보하고 있습니다. 개인화된 큐레이션 알고리즘 도입과 브랜드 밸류 관리를 병행한다면 이커머스 시장에서 독보적인 위치를 점할 수 있을 것입니다.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass">
+        <p>&copy; 2026 SSG DATA ANALYTICS. Created by 20-Year Specialist Analyst.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
